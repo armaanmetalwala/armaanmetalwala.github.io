@@ -86,8 +86,9 @@ section {
 .home {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 9%;
-    background: linear-gradient(to right, rgba(6, 6, 6, .88) 0%, rgba(6, 6, 6, .55) 50%, rgba(6, 6, 6, .3) 100%), url('/images/about1.jpeg');
+    background: var(--bg-color);
     background-size: cover;
     background-position: center top;
 }
@@ -95,6 +96,20 @@ section {
 .home-content {
     max-width: 60rem;
     z-index: 99;
+}
+
+.home-img {
+    z-index: 88;
+}
+
+.home-img img {
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: .3rem solid var(--main-color);
+    box-shadow: 0 0 2.5rem rgba(182, 134, 211, .5);
 }
 
 .home-content h1 {
@@ -766,6 +781,11 @@ span {
         background: var(--bg-color);
         opacity: .6;
     }
+
+    .home-img img {
+        width: 24rem;
+        height: 24rem;
+    }
 }
 
 @media (max-width: 520px) {
@@ -825,6 +845,10 @@ span {
 
     .home-content h1 {
         font-size: 5rem
+    }
+
+    .home-img {
+        display: none;
     }
 }
 
